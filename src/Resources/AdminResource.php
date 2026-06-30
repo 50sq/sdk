@@ -7,6 +7,7 @@ namespace FiftySq\Sdk\Resources;
 use FiftySq\Sdk\Resources\Admin\AdminAccountResource;
 use FiftySq\Sdk\Resources\Admin\AdminAlbumResource;
 use FiftySq\Sdk\Resources\Admin\AdminClientResource;
+use FiftySq\Sdk\Resources\Admin\AdminFormResource;
 use FiftySq\Sdk\Resources\Admin\AdminGalleryResource;
 use FiftySq\Sdk\Resources\Admin\AdminMediaResource;
 use FiftySq\Sdk\Resources\Admin\AdminPortfolioResource;
@@ -25,6 +26,11 @@ class AdminResource extends BaseResource
     public function media(): AdminMediaResource
     {
         return new AdminMediaResource($this->connector);
+    }
+
+    public function forms(): AdminFormResource
+    {
+        return new AdminFormResource($this->connector);
     }
 
     public function albums(): AdminAlbumResource
